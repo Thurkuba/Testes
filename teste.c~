@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(int numargs, char *arg[]) {
+
+  FILE *entrada;
+  const char *arq = arg[1];
+  entrada = fopen(arq, "r");
+  printf("eee");
+  int c;
+
+
+  /* while(){
+    char c;
+    int k = fscanf(entrada, "%s", &c);
+    if( k!= 1) break;
+    printf(c);
+  }
+  fclose(entrada);
+  */
+
+  while ((c = getc(entrada)) != EOF){
+    putchar(c);
+    if(c==10) printf("KKKKK\n");
+  }
+  fclose(entrada);
+}

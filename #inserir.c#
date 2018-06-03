@@ -1,0 +1,23 @@
+int main(){
+  
+  if(strlen(key) != 0){
+    int length = strlen(key);
+    if(length > tam_maior_palavra){ //guarda o tamanho da maior palavra
+      tam_maior_palavra = length;
+    }
+    /*char *key = malloc(tot_chars + 1);
+      for(int i = 0; i < tot_chars; i++){//armazeno num vetor de tamanho ideal
+      key[i] = chars[i];
+      }
+      key[tot_chars] = '\0';*/
+    ir = stable_insert(st, key);
+    if(ir.new == 0){
+      ir.data->i++; //aumenta a ocorrencia se ela ja existir
+    }else{
+      words[n++] = *key; //se nao existir, adiciona no vetor words
+    }
+    memset(key,0,sizeof(key));
+    char* key = malloc(200);
+    //tot_chars = 0;
+  }
+}
